@@ -18,20 +18,34 @@
         <module>straw-api-user</module>
         <module>straw-eureka-server</module>
         <module>straw-generator</module>
+        <module>straw-commons</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
-        <springboot.version>2.3.2.RELEASE</springboot.version>
+        <springboot.version>2.3.3.RELEASE</springboot.version>
         <lombok.version>1.18.12</lombok.version>
         <mysql.version>8.0.21</mysql.version>
         <mybatis.vsersion>2.1.3</mybatis.vsersion>
         <druid.version>1.2.5</druid.version>
         <mybatisplus.version>3.3.2</mybatisplus.version>
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
+        <commons.version>0.0.1-SNAPSHOT</commons.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>com.tarrasques</groupId>
+                <artifactId>straw-commons</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

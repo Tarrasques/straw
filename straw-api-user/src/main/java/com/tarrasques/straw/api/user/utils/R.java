@@ -20,7 +20,7 @@ public class R implements Serializable {
     }
 
     public static R OK(){
-        return new R(1);
+        return new R(2000);
     }
 
     public static  R failed(Integer state,Throwable e){

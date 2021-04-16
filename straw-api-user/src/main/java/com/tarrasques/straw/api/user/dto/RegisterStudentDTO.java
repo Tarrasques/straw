@@ -11,7 +11,6 @@ import java.time.LocalDate;
 @Data
 @Accessors
 public class RegisterStudentDTO implements Serializable {
-    @NotBlank(message = "注册失败！请填写有效的用户名！")
     private String username;
     private String nickname;
     @Pattern(regexp = "^\\w{4,16}$",message = "注册失败！密码长度必须4~16位！")

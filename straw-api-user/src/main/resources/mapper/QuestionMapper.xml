@@ -3,7 +3,7 @@
 <mapper namespace="com.tarrasques.straw.api.user.mapper.QuestionMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.tarrasques.straw.api.user.model.Question">
+    <resultMap id="BaseResultMap" type="com.tarrasques.straw.commons.model.Question">
         <id column="id" property="id" />
         <result column="title" property="title" />
         <result column="content" property="content" />

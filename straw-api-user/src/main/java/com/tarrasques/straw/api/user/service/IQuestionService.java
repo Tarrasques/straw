@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.service;
 
-import com.tarrasques.straw.api.user.model.Question;
+import com.tarrasques.straw.commons.model.Question;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

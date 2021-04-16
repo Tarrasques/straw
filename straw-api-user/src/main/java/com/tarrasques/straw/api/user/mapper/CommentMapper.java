@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.mapper;
 
-import com.tarrasques.straw.api.user.model.Comment;
+import com.tarrasques.straw.commons.model.Comment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.service.impl;
 
-import com.tarrasques.straw.api.user.model.Permission;
+import com.tarrasques.straw.commons.model.Permission;
 import com.tarrasques.straw.api.user.mapper.PermissionMapper;
 import com.tarrasques.straw.api.user.service.IPermissionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

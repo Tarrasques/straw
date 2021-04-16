@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.service.impl;
 
-import com.tarrasques.straw.api.user.model.ClassInfo;
+import com.tarrasques.straw.commons.model.ClassInfo;
 import com.tarrasques.straw.api.user.mapper.ClassInfoMapper;
 import com.tarrasques.straw.api.user.service.IClassInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

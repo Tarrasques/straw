@@ -1,4 +1,4 @@
-package com.tarrasques.straw.api.user.model;
+package com.tarrasques.straw.commons.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -19,19 +19,13 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("answer")
-public class Answer implements Serializable {
+@TableName("user_question")
+public class UserQuestion implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
-
-    /**
-     * 答案正文
-     */
-    @TableField("content")
-    private String content;
 
     /**
      * 作者id
@@ -40,22 +34,10 @@ public class Answer implements Serializable {
     private Integer userId;
 
     /**
-     * 作者昵称
-     */
-    @TableField("user_nick_name")
-    private String userNickName;
-
-    /**
      * 问题id
      */
     @TableField("question_id")
     private Integer questionId;
-
-    /**
-     * 是否已采纳，0-未采纳，1-已采纳
-     */
-    @TableField("is_accepted")
-    private Integer isAccepted;
 
     /**
      * 创建时间

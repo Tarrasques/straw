@@ -1,7 +1,7 @@
 package com.tarrasques.straw.api.user.service;
 
 import com.tarrasques.straw.api.user.dto.RegisterStudentDTO;
-import com.tarrasques.straw.api.user.model.User;
+import com.tarrasques.straw.commons.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

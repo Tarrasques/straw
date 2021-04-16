@@ -1,4 +1,4 @@
-package com.tarrasques.straw.api.user.model;
+package com.tarrasques.straw.commons.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -19,8 +19,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("comment")
-public class Comment implements Serializable {
+@TableName("role_permission")
+public class RolePermission implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,28 +28,16 @@ public class Comment implements Serializable {
     private Integer id;
 
     /**
-     * 作者id
+     * 角色id
      */
-    @TableField("user_id")
-    private Integer userId;
+    @TableField("role_id")
+    private Integer roleId;
 
     /**
-     * 作者昵称
+     * 权限id
      */
-    @TableField("user_nick_name")
-    private String userNickName;
-
-    /**
-     * 答案id
-     */
-    @TableField("answer_id")
-    private Integer answerId;
-
-    /**
-     * 正文
-     */
-    @TableField("content")
-    private String content;
+    @TableField("permission_id")
+    private Integer permissionId;
 
     /**
      * 创建时间

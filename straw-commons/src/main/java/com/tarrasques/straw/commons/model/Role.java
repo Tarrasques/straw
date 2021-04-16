@@ -1,4 +1,4 @@
-package com.tarrasques.straw.api.user.model;
+package com.tarrasques.straw.commons.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -19,8 +19,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("role_permission")
-public class RolePermission implements Serializable {
+@TableName("role")
+public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,16 +28,10 @@ public class RolePermission implements Serializable {
     private Integer id;
 
     /**
-     * 角色id
+     * 角色名称
      */
-    @TableField("role_id")
-    private Integer roleId;
-
-    /**
-     * 权限id
-     */
-    @TableField("permission_id")
-    private Integer permissionId;
+    @TableField("name")
+    private String name;
 
     /**
      * 创建时间

@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.service.impl;
 
-import com.tarrasques.straw.api.user.model.RolePermission;
+import com.tarrasques.straw.commons.model.RolePermission;
 import com.tarrasques.straw.api.user.mapper.RolePermissionMapper;
 import com.tarrasques.straw.api.user.service.IRolePermissionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.service.impl;
 
-import com.tarrasques.straw.api.user.model.Comment;
+import com.tarrasques.straw.commons.model.Comment;
 import com.tarrasques.straw.api.user.mapper.CommentMapper;
 import com.tarrasques.straw.api.user.service.ICommentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

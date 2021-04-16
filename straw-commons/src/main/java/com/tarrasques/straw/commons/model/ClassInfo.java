@@ -1,4 +1,4 @@
-package com.tarrasques.straw.api.user.model;
+package com.tarrasques.straw.commons.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -19,8 +19,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("permission")
-public class Permission implements Serializable {
+@TableName("class_info")
+public class ClassInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,16 +28,22 @@ public class Permission implements Serializable {
     private Integer id;
 
     /**
-     * 权限标识
+     * 班级名称
      */
-    @TableField("authority")
-    private String authority;
+    @TableField("name")
+    private String name;
 
     /**
-     * 描述
+     * 邀请码
      */
-    @TableField("description")
-    private String description;
+    @TableField("invite_code")
+    private String inviteCode;
+
+    /**
+     * 是否启用，0-禁用，1-启用
+     */
+    @TableField("is_enabled")
+    private Integer isEnabled;
 
     /**
      * 创建时间

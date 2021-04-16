@@ -3,7 +3,7 @@
 <mapper namespace="com.tarrasques.straw.api.user.mapper.RolePermissionMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.tarrasques.straw.api.user.model.RolePermission">
+    <resultMap id="BaseResultMap" type="com.tarrasques.straw.commons.model.RolePermission">
         <id column="id" property="id" />
         <result column="role_id" property="roleId" />
         <result column="permission_id" property="permissionId" />

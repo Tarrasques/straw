@@ -3,12 +3,16 @@ package com.tarrasques.straw.api.user.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tarrasques.straw.api.user.dto.RegisterStudentDTO;
-import com.tarrasques.straw.api.user.ex.*;
+import com.tarrasques.straw.api.user.ex.ClassDisabledException;
+import com.tarrasques.straw.api.user.ex.InsertException;
+import com.tarrasques.straw.api.user.ex.InviteCodeException;
+import com.tarrasques.straw.api.user.ex.PhoneDuplicateException;
 import com.tarrasques.straw.api.user.mapper.ClassInfoMapper;
 import com.tarrasques.straw.api.user.mapper.UserMapper;
-import com.tarrasques.straw.api.user.model.ClassInfo;
-import com.tarrasques.straw.api.user.model.User;
+import com.tarrasques.straw.commons.model.ClassInfo;
+import com.tarrasques.straw.commons.model.User;
 import com.tarrasques.straw.api.user.service.IUserService;
+import com.tarrasques.straw.api.user.utils.PasswordUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,18 +37,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public void registerStudent(RegisterStudentDTO studentDTO) {
         System.out.println(studentDTO);
-        // 从参数registerStudentDTO中取出用户名
-        String username = studentDTO.getUsername();
+/**        // 从参数registerStudentDTO中取出用户名
+ String username = studentDTO.getUsername();
+ // 基于以上取出的用户名，调用userMapper.findByUsername()查询用户数据
+ User byUsername = userMapper.findByUsername(username);
+ // 判断查询结果是否不为null
+ if (byUsername != null) {
+ // 是：根据用户名找到了用户数据，则用户名已经被注册，将抛出UsernameDuplicateException
+ throw new UsernameDuplicateException("注册失败！用户名已被注册。");
+ }*/
         String phone = studentDTO.getPhone();
-        // 基于以上取出的用户名，调用userMapper.findByUsername()查询用户数据
-        User byUsername = userMapper.findByUsername(username);
         User byPhone = userMapper.findByPhone(phone);
-        // 判断查询结果是否不为null
-        if (byUsername != null) {
-            // 是：根据用户名找到了用户数据，则用户名已经被注册，将抛出UsernameDuplicateException
-            throw new UsernameDuplicateException("注册失败！用户名已被注册。");
-        }
-        if (byPhone != null){
+        if (byPhone != null) {
             throw new PhoneDuplicateException("注册失败！手机号已被注册。");
         }
         // 从参数registerStudentDTO中取出邀请码
@@ -70,7 +74,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         // 补全user对象中的属性值：username < 从参数中获取
         user.setUsername(studentDTO.getPhone());
         // 补全user对象中的属性值：password < [暂]从参数中获取
-        user.setPassword(studentDTO.getPassword());
+        String rawPassword = studentDTO.getPassword();
+        user.setPassword(PasswordUtils.encode(rawPassword));
         // 补全user对象中的属性值：nickname < 从参数中获取
         user.setNickname(studentDTO.getNickname());
         // 补全user对象中的属性值：gender < 从参数中获取

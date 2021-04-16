@@ -1,16 +1,13 @@
 package com.tarrasques.straw.api.user;
 
 import com.tarrasques.straw.api.user.mapper.UserMapper;
-import com.tarrasques.straw.api.user.model.User;
+import com.tarrasques.straw.commons.model.User;
 import com.tarrasques.straw.api.user.service.IUserService;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.sql.ConnectionEvent;
 import javax.sql.DataSource;
-import javax.xml.transform.Source;
 import java.sql.Connection;
 
 @SpringBootTest

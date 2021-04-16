@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.service.impl;
 
-import com.tarrasques.straw.api.user.model.Tag;
+import com.tarrasques.straw.commons.model.Tag;
 import com.tarrasques.straw.api.user.mapper.TagMapper;
 import com.tarrasques.straw.api.user.service.ITagService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
