@@ -1,0 +1,24 @@
+#端口号
+server:
+  port: 8081
+spring:
+  #程序名称
+  application:
+    name: api-question
+  datasource:
+    url: jdbc:mysql://localhost:3306/straw?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 2
+      max-active: 100
+      min-idle: 2
+#配置SQL语句的xml文件位置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+#日志显示级别
+logging:
+  level:
+    com.tarrasques.straw: trace
