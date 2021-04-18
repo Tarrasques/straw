@@ -1,6 +1,6 @@
 package com.tarrasques.straw.api.user.controller;
 
-import com.tarrasques.straw.api.user.utils.R;
+import com.tarrasques.straw.commons.utils.R;
 import com.tarrasques.straw.api.user.ex.*;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

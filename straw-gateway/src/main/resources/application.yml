@@ -28,4 +28,7 @@ zuul:
   routes:
     api-user:
       service-id: api-user
-      path: /api/**
+      path: /api-user/**
+    api-question:
+      service-id: api-question
+      path: /api-question/**

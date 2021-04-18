@@ -165,9 +165,11 @@
 
 <!--引入标签的导航栏-->
 <div class="container-fluid">
-    <div class="nav font-weight-light">
+    <div class="nav font-weight-light" id="tagsApp">
         <a href="tag/tag_question.html" class="nav-item nav-link text-info"><small>全部</small></a>
-        <a href="tag/tag_question.html" class="nav-item nav-link text-info"><small>Java基础</small></a>
+        <a v-for="tag in tags" href="tag/tag_question.html" class="nav-item nav-link text-info">
+            <small v-text="tag.name">Java基础</small>
+        </a>
     </div>
 </div>
 <!-- 我的问答 -->
@@ -466,4 +468,5 @@
     </p>
 </footer>
 </body>
+<script src="js/tags.js"></script>
 </html>

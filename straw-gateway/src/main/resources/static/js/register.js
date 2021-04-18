@@ -3,7 +3,7 @@ let registerApp = new Vue({
     methods:{
         register:function (){
             $.ajax({
-                url: '/api/v1/user/reg',
+                url: '/api-user/v1/user/reg',
                 data: $('#from-reg').serialize(),
                 type: 'POST',
                 success: function (json) {

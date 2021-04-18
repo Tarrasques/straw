@@ -21,11 +21,7 @@ class StrawApiQuestionApplicationTests {
 
     @Test
     void contextLoads() {
-        List<TagVO> all = mapper.getTagList();
-        log.debug("数量："+all.size());
-        for (TagVO vo : all){
-            log.debug(">>>"+vo);
-        }
+
     }
 
 }

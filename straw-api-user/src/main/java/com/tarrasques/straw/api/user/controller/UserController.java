@@ -1,7 +1,7 @@
 package com.tarrasques.straw.api.user.controller;
 
 
-import com.tarrasques.straw.api.user.utils.R;
+import com.tarrasques.straw.commons.utils.R;
 import com.tarrasques.straw.api.user.dto.RegisterStudentDTO;
 import com.tarrasques.straw.api.user.ex.IllegalParameterException;
 import com.tarrasques.straw.api.user.service.IUserService;
